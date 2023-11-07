@@ -11,6 +11,8 @@
 		12B147642AF9662C00F8EC38 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B147632AF9662C00F8EC38 /* ContentView.swift */; };
 		12B147662AF9662E00F8EC38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12B147652AF9662E00F8EC38 /* Assets.xcassets */; };
 		12B147692AF9662E00F8EC38 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12B147682AF9662E00F8EC38 /* Preview Assets.xcassets */; };
+		12B147732AF966EC00F8EC38 /* Classes+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B147722AF966EC00F8EC38 /* Classes+Extensions.swift */; };
+		12B147752AF967D700F8EC38 /* CopoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B147742AF967D700F8EC38 /* CopoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		12B147632AF9662C00F8EC38 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		12B147652AF9662E00F8EC38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12B147682AF9662E00F8EC38 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		12B147722AF966EC00F8EC38 /* Classes+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Classes+Extensions.swift"; sourceTree = "<group>"; };
+		12B147742AF967D700F8EC38 /* CopoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +55,9 @@
 		12B147602AF9662C00F8EC38 /* Nano-Challenge04 */ = {
 			isa = PBXGroup;
 			children = (
+				12B147702AF966D500F8EC38 /* Extensions */,
+				12B1476F2AF966C500F8EC38 /* Views */,
 				12B147612AF9662C00F8EC38 /* Nano_Challenge04App.swift */,
-				12B147632AF9662C00F8EC38 /* ContentView.swift */,
 				12B147652AF9662E00F8EC38 /* Assets.xcassets */,
 				12B147672AF9662E00F8EC38 /* Preview Content */,
 			);
@@ -65,6 +70,23 @@
 				12B147682AF9662E00F8EC38 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		12B1476F2AF966C500F8EC38 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				12B147632AF9662C00F8EC38 /* ContentView.swift */,
+				12B147742AF967D700F8EC38 /* CopoView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		12B147702AF966D500F8EC38 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				12B147722AF966EC00F8EC38 /* Classes+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +160,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				12B147642AF9662C00F8EC38 /* ContentView.swift in Sources */,
+				12B147752AF967D700F8EC38 /* CopoView.swift in Sources */,
+				12B147732AF966EC00F8EC38 /* Classes+Extensions.swift in Sources */,
 				12B147622AF9662C00F8EC38 /* Nano_Challenge04App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
