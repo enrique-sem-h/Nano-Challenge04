@@ -6,11 +6,14 @@
 //
 
 import SwiftUI
+import TipKit
 
 struct ContentView: View {
     @State var copo: Int = 0
     @State var ml: Float = 0
     @State var litros: Bool = false
+    
+    let onboardingTip = OnboardingTip()
     
     var body: some View {
         VStack {
@@ -27,9 +30,15 @@ struct ContentView: View {
                 if copo <= 10 {
                     copo += 1
                 }
+                if onboardingTip.shouldDisplay{
+                    onboardingTip.invalidate(reason: .actionPerformed)
+                }
             } label: {
                 CopoView(copo: copo)
             }
+            TipView(onboardingTip, arrowEdge: .top)
+                .tipViewStyle(OnboardingStyle())
+                
             Button("Esvaziar"){
                 copo = 0
                 ml = 0

@@ -1,18 +1,51 @@
-//
-//  OnboardingTipView.swift
-//  Nano-Challenge04
-//
-//  Created by Letícia Malagutti on 07/11/23.
-//
+import TipKit
 
-import SwiftUI
-
-struct OnboardingTipView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct OnboardingTip: Tip{
+    var title: Text{
+        Text("Encha seu") +
+        Text(" copo ")
+            .foregroundStyle(.blue) +
+        Text("para cumprir a meta")
+    }
+    
+    var message: Text? = Text("Cada clique adiciona ") + Text("250ml").bold() + Text(" de agua")
+    
+    var image: Image? = Image(.copo100)
+    
+    var options: [TipOption] {
+        [
+            Tips.MaxDisplayCount(2)
+        ]
     }
 }
 
-#Preview {
-    OnboardingTipView()
+struct OnboardingStyle: TipViewStyle{
+    func makeBody(configuration: Configuration) -> some View {
+        VStack{
+            if let image = configuration.image{
+                image
+                    .scaledToFit()
+            }
+            if let title = configuration.title{
+                title
+                    .font(.headline)
+            }
+            if let message = configuration.message{
+                message
+            }
+        }.frame(maxWidth: .infinity)
+            .backgroundStyle(.background)
+            .overlay(alignment: .topTrailing) {
+                Image(systemName: "multiply")
+                    .font(.title2)
+                    .alignmentGuide(.top) { $0[.top] - 5 }
+                    .alignmentGuide(.trailing) { $0[.trailing] + 5 }
+                    .foregroundStyle(.secondary)
+                    .onTapGesture {
+                        configuration.tip.invalidate(reason: .tipClosed)
+                    }
+            }
+            .padding()
+    }
+    
 }
