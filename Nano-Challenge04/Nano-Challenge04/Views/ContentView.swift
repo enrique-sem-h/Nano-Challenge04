@@ -55,6 +55,7 @@ struct ContentView: View {
             Button("Esvaziar"){
                 copo = 0
                 ml = 0
+              tip.invalidate(reason: .actionPerformed)
             }
             .buttonStyle(.borderedProminent)
             .popoverTip(tip)
