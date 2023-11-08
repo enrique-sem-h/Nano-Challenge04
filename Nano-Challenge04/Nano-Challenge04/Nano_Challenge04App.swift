@@ -11,7 +11,7 @@ import SwiftUI
 struct Nano_Challenge04App: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TimeSensitiveTipView()
         }
     }
 }
