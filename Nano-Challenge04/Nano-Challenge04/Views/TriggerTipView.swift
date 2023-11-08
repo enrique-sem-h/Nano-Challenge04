@@ -6,13 +6,49 @@
 //
 
 import SwiftUI
+import TipKit
 
-struct TriggerTipView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+//struct TriggerTipView: View {
+//    var body: some View {
+//        NavigationStack{
+//            Button("Teste"){
+//                
+//            }
+//            .navigationTitle("Info")
+//        }
+//    }
+//}
+
+struct TriggerTip: Tip {
+    @Parameter
+    static var showTip: Bool = false
+    
+    var title: Text {
+        Text("Info")
     }
-}
 
-#Preview {
-    TriggerTipView()
+    var message: Text?{
+        Text("Clique no copo para adicional 250ml de água bebida ou no botão esvaziar para esvaziar o copo e recomeçar a contagem")
+    }
+
+    var image: Image? {
+        Image(systemName: "info.bubble")
+    }
+    
+    var options: [TipOption] {
+        return [
+            Tips.IgnoresDisplayFrequency(true)
+        ]
+    }
+    
+    var rules: [Rule] {
+        return [
+            #Rule(Self.$showTip) { $0 == true }
+        ]
+    }
+    
 }
+//
+//#Preview {
+//    TriggerTipView()
+//}
