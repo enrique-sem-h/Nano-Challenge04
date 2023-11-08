@@ -32,26 +32,23 @@ struct ContentView: View {
                     if copo <= 10 {
                         copo += 1
                     }
+                    if onboardingTip.shouldDisplay{
+                        onboardingTip.invalidate(reason: .actionPerformed)
+                    }
                 } label: {
                     CopoView(copo: copo)
                 }
-                if onboardingTip.shouldDisplay{
-                    onboardingTip.invalidate(reason: .actionPerformed)
-                }
-            } label: {
-                CopoView(copo: copo)
-            }
             TipView(onboardingTip, arrowEdge: .top)
                 .tipViewStyle(OnboardingStyle())
-                
+            
             Button("Esvaziar"){
                 copo = 0
                 ml = 0
-                }
-                .buttonStyle(.borderedProminent)
-                
-                Spacer()
             }
+            .buttonStyle(.borderedProminent)
+            
+            Spacer()
+        }
             .padding()
             .toolbar(content: {
                 ToolbarItem(placement: .topBarTrailing) {
