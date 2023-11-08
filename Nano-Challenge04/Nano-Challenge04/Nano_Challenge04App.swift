@@ -6,12 +6,18 @@
 //
 
 import SwiftUI
+import TipKit
 
 @main
 struct Nano_Challenge04App: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      TimeSensitiveTipView()
     }
+  }
+  
+  init() {
+    try? Tips.configure([ .displayFrequency(.immediate), .datastoreLocation(.applicationDefault)])
+  }
+  
 }
