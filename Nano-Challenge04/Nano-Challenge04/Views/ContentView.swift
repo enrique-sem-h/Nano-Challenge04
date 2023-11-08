@@ -54,9 +54,10 @@ struct ContentView: View {
                 }
             })
         }
-        .onTapGesture {
-            TriggerTip.showTip = false
-        }
+//        .onTapGesture {
+//            TriggerTip.showTip = false
+//
+//        }
         .task {
             try? Tips.configure()
         }
