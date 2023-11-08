@@ -78,5 +78,5 @@ struct TimeSensitiveTipView: View {
 }
 
 #Preview {
-    TimeSensitiveTipView()
+  TimeSensitiveTipView()
 }

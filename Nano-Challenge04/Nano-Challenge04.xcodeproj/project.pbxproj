@@ -17,6 +17,7 @@
 		12B147792AFAA9A600F8EC38 /* TriggerTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B147782AFAA9A600F8EC38 /* TriggerTipView.swift */; };
 		12B1477B2AFAA9D100F8EC38 /* TimeSensitiveTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B1477A2AFAA9D100F8EC38 /* TimeSensitiveTipView.swift */; };
 		12B1477D2AFAA9F500F8EC38 /* AppOpenedTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B1477C2AFAA9F500F8EC38 /* AppOpenedTipView.swift */; };
+		9B2BEAE82AFAB22500D8D383 /* AppOpenedTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2BEAE72AFAB22500D8D383 /* AppOpenedTip.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		12B147782AFAA9A600F8EC38 /* TriggerTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggerTipView.swift; sourceTree = "<group>"; };
 		12B1477A2AFAA9D100F8EC38 /* TimeSensitiveTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSensitiveTipView.swift; sourceTree = "<group>"; };
 		12B1477C2AFAA9F500F8EC38 /* AppOpenedTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppOpenedTipView.swift; sourceTree = "<group>"; };
+		9B2BEAE72AFAB22500D8D383 /* AppOpenedTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppOpenedTip.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				12B147612AF9662C00F8EC38 /* Nano_Challenge04App.swift */,
 				12B147652AF9662E00F8EC38 /* Assets.xcassets */,
 				12B147672AF9662E00F8EC38 /* Preview Content */,
+				9B2BEAE72AFAB22500D8D383 /* AppOpenedTip.swift */,
 			);
 			path = "Nano-Challenge04";
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				12B1477B2AFAA9D100F8EC38 /* TimeSensitiveTipView.swift in Sources */,
 				12B147752AF967D700F8EC38 /* CopoView.swift in Sources */,
 				12B147732AF966EC00F8EC38 /* Classes+Extensions.swift in Sources */,
+				9B2BEAE82AFAB22500D8D383 /* AppOpenedTip.swift in Sources */,
 				12B147622AF9662C00F8EC38 /* Nano_Challenge04App.swift in Sources */,
 				12B1477D2AFAA9F500F8EC38 /* AppOpenedTipView.swift in Sources */,
 				12B147772AFAA97A00F8EC38 /* OnboardingTipView.swift in Sources */,
@@ -325,7 +329,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.leticiamalagutti.Nano-Challenge04";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.VictorHugo.Nano-Challenge04";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -354,7 +358,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.leticiamalagutti.Nano-Challenge04";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.VictorHugo.Nano-Challenge04";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

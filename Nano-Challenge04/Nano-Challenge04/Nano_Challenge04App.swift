@@ -10,11 +10,14 @@ import TipKit
 
 @main
 struct Nano_Challenge04App: App {
-    var body: some Scene {
-        WindowGroup {
-            TimeSensitiveTipView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      AppOpenedTipView()
     }
-    
-    
+  }
+  
+  init() {
+    try? Tips.configure([ .displayFrequency(.immediate), .datastoreLocation(.applicationDefault)])
+  }
+  
 }
