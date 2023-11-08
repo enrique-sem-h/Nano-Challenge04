@@ -13,17 +13,28 @@ struct ContentView: View {
     @State var ml: Float = 0
     @State var litros: Bool = false
     private var triggerTip = TriggerTip()
+    @State var tip = TimeSensitiveTip()
+    private var appOpenedTip = AppOpenedTip()
     
     let onboardingTip = OnboardingTip()
     
     var body: some View {
         NavigationStack{
             VStack {
-                Toggle(isOn: $litros) {
-                    Text(litros ? "litros" : "ml")
-                        .font(.title2)
-                        .bold()
+              HStack {
+                Spacer()
+                Button {
+                  litros.toggle()
+                  appOpenedTip.invalidate(reason: .actionPerformed)
+                } label: {
+                  Text(litros ? "litros" : "ml")
+                    .font(.title2)
+                    .bold()
+                    .foregroundStyle(.black)
                 }
+                .popoverTip(appOpenedTip)
+              }.padding(.horizontal)
+              
                 Text(litros ? String(format: "%.2f litros bebidos", ml/1000) : String(format: "%.f ml bebidos", ml))
                     .font(.largeTitle)
                     .bold()
@@ -46,6 +57,7 @@ struct ContentView: View {
                 ml = 0
             }
             .buttonStyle(.borderedProminent)
+            .popoverTip(tip)
             
             Spacer()
         }
@@ -61,13 +73,17 @@ struct ContentView: View {
                 }
             })
         }
-//        .onTapGesture {
-//            TriggerTip.showTip = false
-//
-//        }
+
         .task {
-            try? Tips.configure()
+          await tip.delayText()
         }
+      
+        .onAppear {
+          Task{
+            await AppOpenedTip.numberOfTimesVisited.donate()
+          }
+        }
+      
     }
 }
 

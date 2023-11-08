@@ -11,12 +11,10 @@
 		12B147642AF9662C00F8EC38 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B147632AF9662C00F8EC38 /* ContentView.swift */; };
 		12B147662AF9662E00F8EC38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12B147652AF9662E00F8EC38 /* Assets.xcassets */; };
 		12B147692AF9662E00F8EC38 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12B147682AF9662E00F8EC38 /* Preview Assets.xcassets */; };
-		12B147732AF966EC00F8EC38 /* Classes+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B147722AF966EC00F8EC38 /* Classes+Extensions.swift */; };
 		12B147752AF967D700F8EC38 /* CopoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B147742AF967D700F8EC38 /* CopoView.swift */; };
-		12B147772AFAA97A00F8EC38 /* OnboardingTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B147762AFAA97A00F8EC38 /* OnboardingTipView.swift */; };
-		12B147792AFAA9A600F8EC38 /* TriggerTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B147782AFAA9A600F8EC38 /* TriggerTipView.swift */; };
-		12B1477B2AFAA9D100F8EC38 /* TimeSensitiveTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B1477A2AFAA9D100F8EC38 /* TimeSensitiveTipView.swift */; };
-		12B1477D2AFAA9F500F8EC38 /* AppOpenedTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B1477C2AFAA9F500F8EC38 /* AppOpenedTipView.swift */; };
+		12B147772AFAA97A00F8EC38 /* OnboardingTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B147762AFAA97A00F8EC38 /* OnboardingTip.swift */; };
+		12B147792AFAA9A600F8EC38 /* TriggerTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B147782AFAA9A600F8EC38 /* TriggerTip.swift */; };
+		12B1477B2AFAA9D100F8EC38 /* TimeSensitiveTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B1477A2AFAA9D100F8EC38 /* TimeSensitiveTip.swift */; };
 		9B2BEAE82AFAB22500D8D383 /* AppOpenedTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2BEAE72AFAB22500D8D383 /* AppOpenedTip.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,12 +24,10 @@
 		12B147632AF9662C00F8EC38 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		12B147652AF9662E00F8EC38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		12B147682AF9662E00F8EC38 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		12B147722AF966EC00F8EC38 /* Classes+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Classes+Extensions.swift"; sourceTree = "<group>"; };
 		12B147742AF967D700F8EC38 /* CopoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopoView.swift; sourceTree = "<group>"; };
-		12B147762AFAA97A00F8EC38 /* OnboardingTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTipView.swift; sourceTree = "<group>"; };
-		12B147782AFAA9A600F8EC38 /* TriggerTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggerTipView.swift; sourceTree = "<group>"; };
-		12B1477A2AFAA9D100F8EC38 /* TimeSensitiveTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSensitiveTipView.swift; sourceTree = "<group>"; };
-		12B1477C2AFAA9F500F8EC38 /* AppOpenedTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppOpenedTipView.swift; sourceTree = "<group>"; };
+		12B147762AFAA97A00F8EC38 /* OnboardingTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTip.swift; sourceTree = "<group>"; };
+		12B147782AFAA9A600F8EC38 /* TriggerTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggerTip.swift; sourceTree = "<group>"; };
+		12B1477A2AFAA9D100F8EC38 /* TimeSensitiveTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSensitiveTip.swift; sourceTree = "<group>"; };
 		9B2BEAE72AFAB22500D8D383 /* AppOpenedTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppOpenedTip.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,12 +61,11 @@
 		12B147602AF9662C00F8EC38 /* Nano-Challenge04 */ = {
 			isa = PBXGroup;
 			children = (
-				12B147702AF966D500F8EC38 /* Extensions */,
+				9B59F8B82AFC014C003D5FEA /* Tips */,
 				12B1476F2AF966C500F8EC38 /* Views */,
 				12B147612AF9662C00F8EC38 /* Nano_Challenge04App.swift */,
 				12B147652AF9662E00F8EC38 /* Assets.xcassets */,
 				12B147672AF9662E00F8EC38 /* Preview Content */,
-				9B2BEAE72AFAB22500D8D383 /* AppOpenedTip.swift */,
 			);
 			path = "Nano-Challenge04";
 			sourceTree = "<group>";
@@ -88,20 +83,19 @@
 			children = (
 				12B147632AF9662C00F8EC38 /* ContentView.swift */,
 				12B147742AF967D700F8EC38 /* CopoView.swift */,
-				12B147762AFAA97A00F8EC38 /* OnboardingTipView.swift */,
-				12B147782AFAA9A600F8EC38 /* TriggerTipView.swift */,
-				12B1477A2AFAA9D100F8EC38 /* TimeSensitiveTipView.swift */,
-				12B1477C2AFAA9F500F8EC38 /* AppOpenedTipView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		12B147702AF966D500F8EC38 /* Extensions */ = {
+		9B59F8B82AFC014C003D5FEA /* Tips */ = {
 			isa = PBXGroup;
 			children = (
-				12B147722AF966EC00F8EC38 /* Classes+Extensions.swift */,
+				12B1477A2AFAA9D100F8EC38 /* TimeSensitiveTip.swift */,
+				12B147782AFAA9A600F8EC38 /* TriggerTip.swift */,
+				9B2BEAE72AFAB22500D8D383 /* AppOpenedTip.swift */,
+				12B147762AFAA97A00F8EC38 /* OnboardingTip.swift */,
 			);
-			path = Extensions;
+			path = Tips;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,14 +169,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				12B147642AF9662C00F8EC38 /* ContentView.swift in Sources */,
-				12B1477B2AFAA9D100F8EC38 /* TimeSensitiveTipView.swift in Sources */,
+				12B1477B2AFAA9D100F8EC38 /* TimeSensitiveTip.swift in Sources */,
 				12B147752AF967D700F8EC38 /* CopoView.swift in Sources */,
-				12B147732AF966EC00F8EC38 /* Classes+Extensions.swift in Sources */,
 				9B2BEAE82AFAB22500D8D383 /* AppOpenedTip.swift in Sources */,
 				12B147622AF9662C00F8EC38 /* Nano_Challenge04App.swift in Sources */,
-				12B1477D2AFAA9F500F8EC38 /* AppOpenedTipView.swift in Sources */,
-				12B147772AFAA97A00F8EC38 /* OnboardingTipView.swift in Sources */,
-				12B147792AFAA9A600F8EC38 /* TriggerTipView.swift in Sources */,
+				12B147772AFAA97A00F8EC38 /* OnboardingTip.swift in Sources */,
+				12B147792AFAA9A600F8EC38 /* TriggerTip.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,17 +8,6 @@
 import SwiftUI
 import TipKit
 
-//struct TriggerTipView: View {
-//    var body: some View {
-//        NavigationStack{
-//            Button("Teste"){
-//                
-//            }
-//            .navigationTitle("Info")
-//        }
-//    }
-//}
-
 struct TriggerTip: Tip {
     @Parameter
     static var showTip: Bool = false
@@ -48,7 +37,3 @@ struct TriggerTip: Tip {
     }
     
 }
-//
-//#Preview {
-//    TriggerTipView()
-//}

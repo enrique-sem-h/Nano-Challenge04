@@ -12,7 +12,7 @@ import TipKit
 struct Nano_Challenge04App: App {
   var body: some Scene {
     WindowGroup {
-      AppOpenedTipView()
+      ContentView()
     }
   }
   
