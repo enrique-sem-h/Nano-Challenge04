@@ -14,6 +14,8 @@ struct ContentView: View {
     @State var litros: Bool = false
     private var triggerTip = TriggerTip()
     
+    let onboardingTip = OnboardingTip()
+    
     var body: some View {
         NavigationStack{
             VStack {
@@ -33,14 +35,22 @@ struct ContentView: View {
                 } label: {
                     CopoView(copo: copo)
                 }
-                Button("Esvaziar"){
-                    copo = 0
-                    ml = 0
+                if onboardingTip.shouldDisplay{
+                    onboardingTip.invalidate(reason: .actionPerformed)
+                }
+            } label: {
+                CopoView(copo: copo)
+            }
+            TipView(onboardingTip, arrowEdge: .top)
+                .tipViewStyle(OnboardingStyle())
+                
+            Button("Esvaziar"){
+                copo = 0
+                ml = 0
                 }
                 .buttonStyle(.borderedProminent)
                 
                 Spacer()
-                
             }
             .padding()
             .toolbar(content: {
