@@ -8,7 +8,7 @@
 import SwiftUI
 import TipKit
 
-struct TimeSensitiveTip: Tip {
+struct AppOpenedTip: Tip {
   
   static var numberOfTimesVisited: Event = Event(id: "dev.victor.numberOfTimesVisited")
   
