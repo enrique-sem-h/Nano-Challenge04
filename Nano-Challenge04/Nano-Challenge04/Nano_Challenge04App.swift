@@ -16,11 +16,5 @@ struct Nano_Challenge04App: App {
         }
     }
     
-    init(){
-        Tips.showAllTipsForTesting()
-        
-        try? Tips.configure()
-        
-    }
     
 }
