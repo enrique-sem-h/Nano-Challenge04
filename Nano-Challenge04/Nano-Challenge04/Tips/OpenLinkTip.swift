@@ -9,15 +9,13 @@ import Foundation
 import TipKit
 
 struct ToutchDownTip: Tip {
-    @Parameter
-    static var showTip: Bool = false
     
     var title: Text {
-        Text("Save as a Favorite")
+        Text("hey there")
     }
 
     var message: Text? {
-        Text("Your favorite landmarks always appear at the top of the list.")
+        Text("open the link!")
     }
 
     var image: Image? {
@@ -27,12 +25,6 @@ struct ToutchDownTip: Tip {
     var options: [TipOption] {
         return [
             Tips.IgnoresDisplayFrequency(true)
-        ]
-    }
-    
-    var rules: [Rule] {
-        return [
-            #Rule(Self.$showTip) { $0 == false }
         ]
     }
     

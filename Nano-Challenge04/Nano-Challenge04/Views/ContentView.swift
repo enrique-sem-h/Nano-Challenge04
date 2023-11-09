@@ -19,7 +19,7 @@ struct ContentView: View {
     
     let toutchDownTip = ToutchDownTip()
     @Environment(\.openURL) private var openURL
-    @State private var bgColor: Color = .white
+
     
     var body: some View {
         NavigationStack{
@@ -64,23 +64,23 @@ struct ContentView: View {
             .popoverTip(tip)
             
             Spacer()
-                
                 Button{
-                    ToutchDownTip.showTip = true
+                   
                     
                 } label: {
                     Image(systemName: "heart.fill")
                         .imageScale(.large)
                         .foregroundColor(.red)
                 }
-                .popoverTip(toutchDownTip, arrowEdge: .bottom) { action in
-                      
-                       if action.id == "open-url", let url = URL(string: "https://developer.apple.com/documentation/TipKit") {
-                           openURL(url) { accepted in
-                               print(accepted ? "Success FAQ" : "Failure")
-                           }
-                       }
+                TipView(toutchDownTip, arrowEdge: .leading) { action in
+
+                    if action.id == "open-url", let url = URL(string: "https://www.youtube.com/watch?v=5T5BY1j2MkE&ab_channel=RoastedCurry") {
+                        openURL(url) { accepted in
+                            print(accepted ? "Success FAQ" : "Failure")
+                        }
+                    }
                 }
+
                 
         }
             .padding()
