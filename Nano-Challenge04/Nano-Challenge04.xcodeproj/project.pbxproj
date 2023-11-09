@@ -16,6 +16,7 @@
 		12B147792AFAA9A600F8EC38 /* TriggerTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B147782AFAA9A600F8EC38 /* TriggerTip.swift */; };
 		12B1477B2AFAA9D100F8EC38 /* TimeSensitiveTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B1477A2AFAA9D100F8EC38 /* TimeSensitiveTip.swift */; };
 		9B2BEAE82AFAB22500D8D383 /* AppOpenedTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2BEAE72AFAB22500D8D383 /* AppOpenedTip.swift */; };
+		AB25CABF2AFD2C3A0064A37A /* OpenLinkTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB25CABE2AFD2C3A0064A37A /* OpenLinkTip.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		12B147782AFAA9A600F8EC38 /* TriggerTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggerTip.swift; sourceTree = "<group>"; };
 		12B1477A2AFAA9D100F8EC38 /* TimeSensitiveTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSensitiveTip.swift; sourceTree = "<group>"; };
 		9B2BEAE72AFAB22500D8D383 /* AppOpenedTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppOpenedTip.swift; sourceTree = "<group>"; };
+		AB25CABE2AFD2C3A0064A37A /* OpenLinkTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenLinkTip.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				12B147782AFAA9A600F8EC38 /* TriggerTip.swift */,
 				9B2BEAE72AFAB22500D8D383 /* AppOpenedTip.swift */,
 				12B147762AFAA97A00F8EC38 /* OnboardingTip.swift */,
+				AB25CABE2AFD2C3A0064A37A /* OpenLinkTip.swift */,
 			);
 			path = Tips;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				12B147642AF9662C00F8EC38 /* ContentView.swift in Sources */,
+				AB25CABF2AFD2C3A0064A37A /* OpenLinkTip.swift in Sources */,
 				12B1477B2AFAA9D100F8EC38 /* TimeSensitiveTip.swift in Sources */,
 				12B147752AF967D700F8EC38 /* CopoView.swift in Sources */,
 				9B2BEAE82AFAB22500D8D383 /* AppOpenedTip.swift in Sources */,
@@ -308,7 +312,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Nano-Challenge04/Preview Content\"";
-				DEVELOPMENT_TEAM = HX623XK8T6;
+				DEVELOPMENT_TEAM = 6FXWX5Z987;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -337,7 +341,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Nano-Challenge04/Preview Content\"";
-				DEVELOPMENT_TEAM = HX623XK8T6;
+				DEVELOPMENT_TEAM = 6FXWX5Z987;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

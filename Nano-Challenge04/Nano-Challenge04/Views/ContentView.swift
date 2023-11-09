@@ -15,8 +15,11 @@ struct ContentView: View {
     private var triggerTip = TriggerTip()
     @State var tip = TimeSensitiveTip()
     private var appOpenedTip = AppOpenedTip()
-    
     let onboardingTip = OnboardingTip()
+    
+    let toutchDownTip = ToutchDownTip()
+    @Environment(\.openURL) private var openURL
+    @State private var bgColor: Color = .white
     
     var body: some View {
         NavigationStack{
@@ -61,6 +64,24 @@ struct ContentView: View {
             .popoverTip(tip)
             
             Spacer()
+                
+                Button{
+                    ToutchDownTip.showTip = true
+                    
+                } label: {
+                    Image(systemName: "heart.fill")
+                        .imageScale(.large)
+                        .foregroundColor(.red)
+                }
+                .popoverTip(toutchDownTip, arrowEdge: .bottom) { action in
+                      
+                       if action.id == "open-url", let url = URL(string: "https://developer.apple.com/documentation/TipKit") {
+                           openURL(url) { accepted in
+                               print(accepted ? "Success FAQ" : "Failure")
+                           }
+                       }
+                }
+                
         }
             .padding()
             .toolbar(content: {
@@ -75,6 +96,7 @@ struct ContentView: View {
             })
         }
 
+
         .task {
           await tip.delayText()
         }
@@ -84,7 +106,6 @@ struct ContentView: View {
             await AppOpenedTip.numberOfTimesVisited.donate()
           }
         }
-      
     }
 }
 
