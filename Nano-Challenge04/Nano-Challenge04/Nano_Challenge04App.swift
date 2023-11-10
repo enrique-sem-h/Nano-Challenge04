@@ -17,7 +17,7 @@ struct Nano_Challenge04App: App {
   }
   
   init() {
-    try? Tips.configure([ .displayFrequency(.immediate), .datastoreLocation(.applicationDefault)])
+    try? Tips.configure([.datastoreLocation(.applicationDefault)])
   }
   
 }

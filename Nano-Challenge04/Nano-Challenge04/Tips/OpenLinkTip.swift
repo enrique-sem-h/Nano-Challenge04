@@ -33,6 +33,7 @@ struct TouchDownTip: Tip {
                 Tip.Action(
                     id: "open-url",
                     title: "open link"
+                    
                 )
             ]
         }
