@@ -13,11 +13,11 @@ struct ContentView: View {
     @State var ml: Float = 0
     @State var litros: Bool = false
     private var triggerTip = TriggerTip()
-    @State var tip = TimeSensitiveTip()
+    @State var timeSensitiveTip = TimeSensitiveTip()
     private var appOpenedTip = AppOpenedTip()
     let onboardingTip = OnboardingTip()
     
-    let toutchDownTip = ToutchDownTip()
+    let touchDownTip = TouchDownTip()
     @Environment(\.openURL) private var openURL
 
     
@@ -25,7 +25,9 @@ struct ContentView: View {
         NavigationStack{
             VStack {
               HStack {
+                
                 Spacer()
+                
                 Button {
                   litros.toggle()
                   appOpenedTip.invalidate(reason: .actionPerformed)
@@ -41,6 +43,7 @@ struct ContentView: View {
                 Text(litros ? String(format: "%.2f litros bebidos", ml/1000) : String(format: "%.f ml bebidos", ml))
                     .font(.largeTitle)
                     .bold()
+              
                 Button{
                     ml += 250
                     if copo <= 10 {
@@ -52,36 +55,26 @@ struct ContentView: View {
                 } label: {
                     CopoView(copo: copo)
                 }
+              
             TipView(onboardingTip, arrowEdge: .top)
                 .tipViewStyle(OnboardingStyle())
             
             Button("Esvaziar"){
                 copo = 0
                 ml = 0
-              tip.invalidate(reason: .actionPerformed)
+              timeSensitiveTip.invalidate(reason: .actionPerformed)
             }
             .buttonStyle(.borderedProminent)
-            .popoverTip(tip)
-            
+              TipView(timeSensitiveTip, arrowEdge: .top) { action in
+
+                  if action.id == "open-url", let url = URL(string: "https://www.youtube.com/watch?v=5T5BY1j2MkE&ab_channel=RoastedCurry") {
+                      openURL(url) { accepted in
+                          print(accepted ? "Success FAQ" : "Failure")
+                      }
+                  }
+              }
+              
             Spacer()
-                Button{
-                   
-                    
-                } label: {
-                    Image(systemName: "heart.fill")
-                        .imageScale(.large)
-                        .foregroundColor(.red)
-                }
-                TipView(toutchDownTip, arrowEdge: .leading) { action in
-
-                    if action.id == "open-url", let url = URL(string: "https://www.youtube.com/watch?v=5T5BY1j2MkE&ab_channel=RoastedCurry") {
-                        openURL(url) { accepted in
-                            print(accepted ? "Success FAQ" : "Failure")
-                        }
-                    }
-                }
-
-                
         }
             .padding()
             .toolbar(content: {
@@ -98,7 +91,7 @@ struct ContentView: View {
 
 
         .task {
-          await tip.delayText()
+          await timeSensitiveTip.delayText()
         }
       
         .onAppear {
