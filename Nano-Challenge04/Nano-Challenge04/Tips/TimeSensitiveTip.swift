@@ -16,7 +16,9 @@ struct TimeSensitiveTip:Tip {
     
     public mutating func delayText() async {
         try? await Task.sleep(nanoseconds: 30_000_000_000)
-        TimeSensitiveTip.hasTimeElapsed = true
+        DispatchQueue.main.async{
+            TimeSensitiveTip.hasTimeElapsed = true
+        }
     }
     
     var rules: [Rule]{

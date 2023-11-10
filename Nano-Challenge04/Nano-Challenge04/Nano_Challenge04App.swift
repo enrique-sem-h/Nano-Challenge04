@@ -7,12 +7,16 @@
 
 import SwiftUI
 import TipKit
+import CloudKit
 
 @main
 struct Nano_Challenge04App: App {
+    
+    let container = CKContainer(identifier: "iCloud.Nano04.CloudKit")
+    
   var body: some Scene {
     WindowGroup {
-      ContentView()
+      ContentView(cloudKitVM: CloudKitViewModel(container: container))
     }
   }
   
