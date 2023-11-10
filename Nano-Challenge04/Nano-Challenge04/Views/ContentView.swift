@@ -7,17 +7,29 @@
 
 import SwiftUI
 import TipKit
+import CloudKit
 
 struct ContentView: View {
-    @State var copo: Int = 0
+    @StateObject private var cloudKitVM: CloudKitViewModel
     @State var ml: Float = 0
+
+    init(cloudKitVM: CloudKitViewModel){
+        _cloudKitVM = StateObject(wrappedValue: cloudKitVM)
+        
+    }
+
+    @State var copo: Int = 0
+
+
     @State var litros: Bool = false
+
+    // tips
     private var triggerTip = TriggerTip()
     @State var timeSensitiveTip = TimeSensitiveTip()
     private var appOpenedTip = AppOpenedTip()
-    let onboardingTip = OnboardingTip()
-    
+    private let onboardingTip = OnboardingTip()
     let touchDownTip = TouchDownTip()
+
     @Environment(\.openURL) private var openURL
 
     
@@ -49,6 +61,9 @@ struct ContentView: View {
                     if copo <= 10 {
                         copo += 1
                     }
+                    if ml >= 3000{
+                        cloudKitVM.saveCup(ml: ml)
+                    }
                     if onboardingTip.shouldDisplay{
                         onboardingTip.invalidate(reason: .actionPerformed)
                     }
@@ -62,6 +77,7 @@ struct ContentView: View {
             Button("Esvaziar"){
                 copo = 0
                 ml = 0
+                cloudKitVM.saveCup(ml: ml)
               timeSensitiveTip.invalidate(reason: .actionPerformed)
             }
             .buttonStyle(.borderedProminent)
@@ -77,31 +93,33 @@ struct ContentView: View {
             Spacer()
         }
             .padding()
-            .toolbar(content: {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button{
-                        TriggerTip.showTip = true
-                    } label:{
-                        Image(systemName: "info.circle")
-                    }
-                    .popoverTip(triggerTip, arrowEdge: .top)
-                }
-            })
+//            .toolbar(content: {
+//                ToolbarItem(placement: .topBarTrailing) {
+//                    Button{
+//                        TriggerTip.showTip = true
+//                    } label:{
+//                        Image(systemName: "info.circle")
+//                    }
+//                    .popoverTip(triggerTip, arrowEdge: .top)
+//                }
+//            })
         }
 
 
         .task {
-          await timeSensitiveTip.delayText()
+          
         }
       
         .onAppear {
           Task{
             await AppOpenedTip.numberOfTimesVisited.donate()
+              await cloudKitVM.aaa()
+              ml = cloudKitVM.ml
           }
         }
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(cloudKitVM: CloudKitViewModel(container: CKContainer.default()))
 }
