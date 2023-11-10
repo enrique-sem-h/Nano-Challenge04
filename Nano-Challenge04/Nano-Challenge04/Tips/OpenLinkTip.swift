@@ -8,7 +8,7 @@
 import Foundation
 import TipKit
 
-struct ToutchDownTip: Tip {
+struct TouchDownTip: Tip {
     
     var title: Text {
         Text("hey there")

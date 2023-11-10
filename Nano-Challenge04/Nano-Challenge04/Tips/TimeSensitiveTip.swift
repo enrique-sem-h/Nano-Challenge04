@@ -26,4 +26,13 @@ struct TimeSensitiveTip:Tip {
             }
         ]
     }
+  
+  var actions: [Action] {
+          [
+              Tip.Action(
+                  id: "open-url",
+                  title: "open link"
+              )
+          ]
+      }
 }
