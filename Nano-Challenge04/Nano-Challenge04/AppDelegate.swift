@@ -25,12 +25,10 @@ class AppDelegate: NSObject, UIApplicationDelegate,UNUserNotificationCenterDeleg
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        
         completionHandler([.banner, .sound])
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        
         completionHandler()
     }
     
@@ -38,16 +36,16 @@ class AppDelegate: NSObject, UIApplicationDelegate,UNUserNotificationCenterDeleg
 
         let predicate = NSPredicate(value: true)
         
-        let subscription = CKQuerySubscription(recordType: "Message", predicate: predicate,subscriptionID: "NewMessage2",options: .firesOnRecordCreation)
+        let subscription = CKQuerySubscription(recordType: "NewCup", predicate: predicate,subscriptionID: "NewCup",options: .firesOnRecordCreation)
         
         let info = CKSubscription.NotificationInfo()
         
         info.titleLocalizationKey = "%1$@"
-        info.titleLocalizationArgs = ["User"]
+        info.titleLocalizationArgs = ["date"]
         
         
         info.alertLocalizationKey = "%1$@"
-        info.alertLocalizationArgs = ["MessageText"]
+        info.alertLocalizationArgs = ["ml"]
         
         info.shouldBadge = true
         
@@ -56,9 +54,9 @@ class AppDelegate: NSObject, UIApplicationDelegate,UNUserNotificationCenterDeleg
         subscription.notificationInfo = info
         CKContainer.default().publicCloudDatabase.save(subscription, completionHandler: { subscription, error in
             if error == nil {
-                // Subscription saved successfully
+                print("Subscribed")
             } else {
-                // Error occurred
+                print("Not subscribed")
             }
         })
     }
