@@ -36,7 +36,7 @@ class AppDelegate: NSObject, UIApplicationDelegate,UNUserNotificationCenterDeleg
 
         let predicate = NSPredicate(value: true)
         
-        let subscription = CKQuerySubscription(recordType: "NewCup", predicate: predicate,subscriptionID: "NewCup",options: .firesOnRecordCreation)
+        let subscription = CKQuerySubscription(recordType: "DailyCup", predicate: predicate,subscriptionID: "NewCup",options: .firesOnRecordCreation)
         
         let info = CKSubscription.NotificationInfo()
         
