@@ -36,7 +36,7 @@ class AppDelegate: NSObject, UIApplicationDelegate,UNUserNotificationCenterDeleg
 
         let predicate = NSPredicate(value: true)
         
-        let subscription = CKQuerySubscription(recordType: "DailyCup", predicate: predicate,subscriptionID: "NewCup",options: .firesOnRecordCreation)
+        let subscription = CKQuerySubscription(recordType: "DailyCup", predicate: predicate,subscriptionID: "NewCup2",options: .firesOnRecordCreation)
         
         let info = CKSubscription.NotificationInfo()
         
@@ -52,12 +52,12 @@ class AppDelegate: NSObject, UIApplicationDelegate,UNUserNotificationCenterDeleg
         info.soundName = "default"
         
         subscription.notificationInfo = info
-        CKContainer.default().publicCloudDatabase.save(subscription, completionHandler: { subscription, error in
-            if error == nil {
-                print("Subscribed")
+        CKContainer(identifier: "iCloud.Nano04.CloudKit").privateCloudDatabase.save(subscription) { returnedRecord, returnedError in
+            if let error = returnedError{
+                print(error)
             } else {
-                print("Not subscribed")
+                print("succesfully subscribed to user notifications")
             }
-        })
+        }
     }
 }
