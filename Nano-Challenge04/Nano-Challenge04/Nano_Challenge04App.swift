@@ -13,6 +13,7 @@ import CloudKit
 struct Nano_Challenge04App: App {
     
     let container = CKContainer(identifier: "iCloud.Nano04.CloudKit")
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
   var body: some Scene {
     WindowGroup {

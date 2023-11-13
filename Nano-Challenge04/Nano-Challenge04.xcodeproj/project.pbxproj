@@ -19,6 +19,7 @@
 		31F1F9112AFEA465006E3A5B /* WaterCup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F1F9102AFEA465006E3A5B /* WaterCup.swift */; };
 		9B2BEAE82AFAB22500D8D383 /* AppOpenedTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2BEAE72AFAB22500D8D383 /* AppOpenedTip.swift */; };
 		AB25CABF2AFD2C3A0064A37A /* OpenLinkTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB25CABE2AFD2C3A0064A37A /* OpenLinkTip.swift */; };
+		E0517D1E2B0299C300DA1CD0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0517D1D2B0299C300DA1CD0 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		31F1F9102AFEA465006E3A5B /* WaterCup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterCup.swift; sourceTree = "<group>"; };
 		9B2BEAE72AFAB22500D8D383 /* AppOpenedTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppOpenedTip.swift; sourceTree = "<group>"; };
 		AB25CABE2AFD2C3A0064A37A /* OpenLinkTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenLinkTip.swift; sourceTree = "<group>"; };
+		E0517D1D2B0299C300DA1CD0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				12B1476F2AF966C500F8EC38 /* Views */,
 				31F1F90C2AFE9E07006E3A5B /* CloudKit */,
 				12B147612AF9662C00F8EC38 /* Nano_Challenge04App.swift */,
+				E0517D1D2B0299C300DA1CD0 /* AppDelegate.swift */,
 				12B147652AF9662E00F8EC38 /* Assets.xcassets */,
 				12B147672AF9662E00F8EC38 /* Preview Content */,
 			);
@@ -187,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0517D1E2B0299C300DA1CD0 /* AppDelegate.swift in Sources */,
 				12B147642AF9662C00F8EC38 /* ContentView.swift in Sources */,
 				AB25CABF2AFD2C3A0064A37A /* OpenLinkTip.swift in Sources */,
 				12B1477B2AFAA9D100F8EC38 /* TimeSensitiveTip.swift in Sources */,
@@ -331,7 +335,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Nano-Challenge04/Preview Content\"";
-				DEVELOPMENT_TEAM = HX623XK8T6;
+				DEVELOPMENT_TEAM = SRXHT55569;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -361,7 +365,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Nano-Challenge04/Preview Content\"";
-				DEVELOPMENT_TEAM = HX623XK8T6;
+				DEVELOPMENT_TEAM = SRXHT55569;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
