@@ -38,3 +38,10 @@ struct TimeSensitiveTip:Tip {
           ]
       }
 }
+
+//@MainActor
+//extension Binding where Value == TimeSensitiveTip{
+//    func waitTime() async{
+//        await wrappedValue.delayText()
+//    }
+//}
