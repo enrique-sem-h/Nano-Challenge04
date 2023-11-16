@@ -78,7 +78,7 @@ struct ContentView: View {
                 copo = 0
                 ml = 0
                 cloudKitVM.saveCup(ml: ml)
-              timeSensitiveTip.invalidate(reason: .actionPerformed)
+//              timeSensitiveTip.invalidate(reason: .actionPerformed)
             }
             .buttonStyle(.borderedProminent)
               TipView(timeSensitiveTip, arrowEdge: .top) { action in
@@ -112,11 +112,17 @@ struct ContentView: View {
       
         .onAppear {
           Task{
+            await timeSenseitiveAwait()
             await AppOpenedTip.numberOfTimesVisited.donate()
               await cloudKitVM.aaa()
               ml = cloudKitVM.ml
           }
         }
+    }
+    
+    func timeSenseitiveAwait() async {
+        try? await Task.sleep(nanoseconds: 10_000_000_000)
+        timeSensitiveTip.delayText()
     }
 }
 
