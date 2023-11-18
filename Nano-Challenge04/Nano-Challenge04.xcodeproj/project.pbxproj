@@ -32,6 +32,7 @@
 		12B147762AFAA97A00F8EC38 /* OnboardingTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTip.swift; sourceTree = "<group>"; };
 		12B147782AFAA9A600F8EC38 /* TriggerTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggerTip.swift; sourceTree = "<group>"; };
 		12B1477A2AFAA9D100F8EC38 /* TimeSensitiveTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSensitiveTip.swift; sourceTree = "<group>"; };
+		319D25552B068DBE0085EAB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		31F1F90D2AFE9E63006E3A5B /* Nano-Challenge04.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Nano-Challenge04.entitlements"; sourceTree = "<group>"; };
 		31F1F90E2AFEA3E1006E3A5B /* CloudKitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitViewModel.swift; sourceTree = "<group>"; };
 		31F1F9102AFEA465006E3A5B /* WaterCup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterCup.swift; sourceTree = "<group>"; };
@@ -70,6 +71,7 @@
 		12B147602AF9662C00F8EC38 /* Nano-Challenge04 */ = {
 			isa = PBXGroup;
 			children = (
+				319D25552B068DBE0085EAB8 /* Info.plist */,
 				31F1F90D2AFE9E63006E3A5B /* Nano-Challenge04.entitlements */,
 				9B59F8B82AFC014C003D5FEA /* Tips */,
 				12B1476F2AF966C500F8EC38 /* Views */,
@@ -338,6 +340,7 @@
 				DEVELOPMENT_TEAM = HX623XK8T6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Nano-Challenge04/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -368,6 +371,7 @@
 				DEVELOPMENT_TEAM = HX623XK8T6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Nano-Challenge04/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

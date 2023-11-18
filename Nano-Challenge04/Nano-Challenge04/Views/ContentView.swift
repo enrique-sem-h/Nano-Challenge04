@@ -98,29 +98,30 @@ struct ContentView: View {
                 Spacer()
             }
             .padding()
-            //            .toolbar(content: {
-            //                ToolbarItem(placement: .topBarTrailing) {
-            //                    Button{
-            //                        TriggerTip.showTip = true
-            //                    } label:{
-            //                        Image(systemName: "info.circle")
-            //                    }
-            //                    .popoverTip(triggerTip, arrowEdge: .top)
-            //                }
-            //            })
+                        .toolbar(content: {
+                            ToolbarItem(placement: .topBarTrailing) {
+                                Button{
+                                    TriggerTip.showTip = true
+                                } label:{
+                                    Image(systemName: "info.circle")
+                                }
+                                .popoverTip(triggerTip, arrowEdge: .top)
+                            }
+                        })
         }
         
         
-        .task {
-            
-        }
         
         .onAppear {
             Task{
                 await AppOpenedTip.numberOfTimesVisited.donate()
-                await TimeSensitiveTip.delayText()
+                await aa()
             }
         }
+    }
+    func aa() async{
+        try? await Task.sleep(nanoseconds: 10_000_000_000)
+        timeSensitiveTip.delayText()
     }
 }
 

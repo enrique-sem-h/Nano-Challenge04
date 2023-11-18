@@ -14,11 +14,8 @@ struct TimeSensitiveTip:Tip {
     var title: Text = Text("Esvaziar")
     var message: Text? = Text("Aperte para esvaziar o copo")
     
-    public mutating func delayText() async {
-        try? await Task.sleep(nanoseconds: 30_000_000_000)
-        DispatchQueue.main.async{
+    public mutating func delayText() {
             TimeSensitiveTip.hasTimeElapsed = true
-        }
     }
     
     var rules: [Rule]{
